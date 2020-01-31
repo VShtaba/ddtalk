@@ -9,6 +9,8 @@ Anonymous and confidential real-time communication use open source WebRTC JavaSc
 **Disclaimer**: [DD Talk] service was developed by IT volunteers on the [Donbass Dialogue Platform], 2014—2020. DD Talk is ***Beta version***. For professional goals use technical support!
 
 # Deploy DD Talk Application
+Good article in English [Deploy a Node.js Application to DigitalOcean with HTTPS](https://coderrocketfuel.com/article/deploy-a-nodejs-application-to-digital-ocean-with-https) 
+
 ## 1. Настраиваем виртуальную машину (ВМ)
 ### Генерируем ключи доступа к ВМ 
 С помощью PuTTYgen www.puttygen.com на локальной машине создаем приватный и публичный SSH ключи:
@@ -208,7 +210,7 @@ $ sudo lsof -n -i4TCP:5349 | grep LISTEN
 
 ### Установка Nginx
 [Установка Nginx в Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04):
-[!!!Deploy a Node.js Application to DigitalOcean with HTTPS](https://coderrocketfuel.com/article/deploy-a-nodejs-application-to-digital-ocean-with-https)
+
 ```sh
 $ sudo apt-get update && sudo apt-get upgrade -y
 $ sudo apt-get install nginx
