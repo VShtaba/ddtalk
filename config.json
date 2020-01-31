@@ -1,0 +1,17 @@
+{
+  "socketURL": "/",
+  "dirPath": "./ui/",
+  "homePage": "index.html",
+  "socketMessageEvent": "DialogueService",
+  "socketCustomEvent": "__YOU_PASS__",
+  "port": "8081",
+  "enableLogs": "false",
+  "autoRebootServerOnFailure": "true",
+  "isUseHTTPs": "false",
+  "sslKey": "",
+  "sslCert": "",
+  "sslCabundle": "",
+  "enableAdmin": "false",
+  "adminUserName": "",
+  "adminPassword": ""
+}

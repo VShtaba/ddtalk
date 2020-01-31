@@ -1,0 +1,23 @@
+{
+  "isUseProxyHTTPs": "true",
+  "ioServerOrigins": ["___YOU_1_DOMEN__:*, ____YOU_2_DOMEN___:*"],
+  "enableClientSideLogs":"false",
+  "EnableRecordVideo":"true",
+  "TURNUser":"ddtalk",
+  "TURNCredential":"NwHEws0siF3g",
+  "TURNAdress":[
+	"turn:__YOU_TURN_ADRESS__:__PORT__?transport=udp"
+  ],
+  "STUNAdress":[
+	"stun:__YOU_STUN_ADRESS_1_:__PORT__?transport=udp",
+	"stun:__YOU_STUN_ADRESS_2_:__PORT__?transport=udp"
+  ],
+  "siteName" : "DDTalk",
+  "title": "DD Talk - Online Dialogue Service",
+  "descriptionText": "Free, anonymous and secure video call tool",
+  "ogType":"website",
+  "imgDir": "icons/",
+  "imgForShare1": "img-for-share.png",
+  "imgForShare2": "preview-600-314.png",
+  "imgForShare3": "preview-1280-640.png"
+}

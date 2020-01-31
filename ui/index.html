@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title>$OG_TITLE</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+	<meta name="Description" content="$OG_DESCRIPTION" />
+	<meta name="author" content="DDTalk" />
+	<link rel="stylesheet" href="./css.min.css" type="text/css" />
+	<link rel="preload" href="./dist/main.js" as="script" />
+	<link rel="preload" href="./dist/DDTalk.min.js" as="script" />
+	<link rel="preload" href="./dist/RTCMultiConnection.min.js" as="script" />
+	
+	<link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png">
+	
+	<link rel="manifest" href="./icons/site.webmanifest">	
+	<link rel="mask-icon" href="./icons/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="./icons/favicon.ico">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-config" content="./icons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+	
+	<!-- OPEN GRAPH META -->
+	<meta property="og:title" content="$OG_TITLE" />
+	<meta property="og:description" content="$OG_DESCRIPTION" />
+	<meta property="og:url" content="$OG_URL" />
+	<meta property="og:image" content="$OG_IMAGE_1" />
+	<meta property="og:image" content="$OG_IMAGE_2" />
+	<meta property="og:image" content="$OG_IMAGE_3" />
+	<meta property="og:site_name" content="$OG_SITE_NAME" />
+	<meta property="og:type" content="$OG_TYPE" />
+	
+	<!-- TWITTER META -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@$OG_SITE_NAME" />
+	<meta name="twitter:creator" content="@$OG_SITE_NAME" />
+	<meta name="twitter:title" content="$OG_TITLE" />
+	<meta name="twitter:description" content="$OG_DESCRIPTION" />
+	<meta name="twitter:image" content="$OG_IMAGE_3" />
+	<script type="application/ld+json">
+	{
+		"@context": "http://schema.org/",
+		"@type": "$OG_TYPE", 
+		"name": "$OG_SITE_NAME",
+		"image": "$OG_IMAGE_3",
+		"description": "$OG_DESCRIPTION",
+		"url": "$OG_URL"
+	}
+	</script>
+</head>
+<body>
+	<div id="stat" style="display:inline-flex;">
+		<span id="coturn-status">...</span>
+	</div>
+	<section class="make-center" style="color:gray">
+		<div id="menu">
+			<!-- icon from https://material.io/resources/icons/?style=baseline	-->
+			<label><a href="/"><img id="DDTalk-logo" src="logo.png" class="icon-menu" title="DD Talk - Cross Messenger without registration for anonymous and confidential real-time communication" /></a> DD Talk </label>
+			<label><img id="share-room-urls" src="share-room-urls-off.png" class="icon-menu" title="Close share room URL panel" /></label>
+			<label><img id="stop-share-room-urls" src="share-room-urls-on.png" class="icon-menu" style="display:none;" title="Open share room URL panel. Press ESC to open/close panel" /></label>
+			<label><img id="config" src="settings-off.png" class="icon-menu" title="Service settings" /></label>
+			<label><img id="stop-config" src="settings-on.png" class="icon-menu" style="display:none;" title="Service settings" /></label>
+			<label><img id="mic" src="mic-on.png" class="icon-menu" title="Walkie Talkie Mode - Press Space bar to ON microphone" /></label>
+			<label><img id="webcam" src="webcam.png" class="icon-menu" title="Webcam ON" /></label>
+			<label><img id="webcam-off" src="webcam-off.png" class="icon-menu" style="display:none;" title="Webcam OFF" /></label>
+			<label><img id="sound-off" class="icon-menu" src="sound-off.png" style="display:none;" title="Auto Sound OFF" /></label>
+			<label><img id="text-chat" src="chat-off.png" class="icon-menu" title="Text chat" /></label>
+			<label><img id="stop-text-chat" src="chat-on.png" class="icon-menu" style="display:none;" title="Text chat" /></label>
+			<label><img id="draw" src="draw-off.png" class="icon-menu" title="draw" /></label>
+			<label><img id="stop-draw" src="draw-on.png" class="icon-menu" style="display:none;" title="Stop draw" /></label>
+			<label><img id="pre-recorded-media" src="pre-recorded-media.png" class="icon-menu" title=" You can stream your .webm, .wav, .mp3, .ogg, .flac, .mp4 or avi files in realtime streaming!" /></label>
+			<label><img id="pre-recorded-media-on" src="pre-recorded-media-on.png" class="icon-menu" style="display:none;" title=" You can stream your WebM or Mp3 files in realtime streaming!" /></label>
+			<label><img id="share-file" src="sharefile.png" class="icon-menu" title="Share File" /></label>
+			<label><img id="share-screen" src="screen-share-icon.png" class="icon-menu" title="Share My Screen anytime and multiple time" /></label>
+			<label><img id="stop-share-screen" src="stop-screen-share-icon.png" class="icon-menu" style="display:none;" title="Stop My Screen" /></label>
+			<label><img id="stats-info-off" src="stats-off.png" class="icon-menu" title="Stats info ON" /></label>
+			<label><img id="stats-info-on" src="stats-on.png" class="icon-menu" style="display:none;" title="Stats info OFF" /></label>
+			<label><img id="full-screen" src="fullscreen.png" class="icon-menu" title="Full screen" /></label>
+		</div>
+		<div id="room-params" style="display:none">
+			<label><img style="width:30px; vertical-align: middle;" id="ChangeRoomID" src="refresh-room-id.png" title="Change the Room ID" /></label>
+			<label>Room name: <input type="text" id="room-id" autocorrect="off" autocapitalize="off" size="20" /></label>
+			<label><button id="open-or-join-room" class="blink-button" disabled>Join</button></label><br />
+			<label id="labelPassword">Password: <input type="password" onclick="this.type='text'" onmouseup="this.type='password'" id="room-password" autocorrect="off" autocapitalize="off" size="20" autocomplete="false" /></label>
+			<label><span id="setPassword">Pass: <img src="pass-key.png" class="icon-menu" /></span></label>
+			<label>Users: <input style="width:30px;" type="number" id="participants-number" /></label>
+			<label>Add viewers <input type="checkbox" id="enableviewers" /></label>
+			<label>admins <input type="checkbox" id="enable-admins" /></label>
+			<br /><br />
+		</div>
+		<div id="room-urls" style="display:none">
+			<label id="helpLinks">
+				<a href="/about.html" target="_blank" title="About DD Talk" rel="noreferrer">About</a> &#10093;
+				<a href="/beforestart.html" target="_blank"  title=" Manual" rel="noreferrer">Manual</a> &#10093; Copy to share
+			</label>
+			<label id="participants-number-panel" style="display:none">
+				<img id="admin-not-in-room" src="admin-off-icon.png" style="height:25px;width:25px;vertical-align:middle;" title="Runing admin panel" />
+				<img id="admin-in-room" src="admin-icon.png" style="height:25px;width:25px;vertical-align:middle;display:none;" title="Runing admin panel" />
+				Join: <label id="join-num" title="The number of participants in the room"></label>
+				<label id="view-number-panel" style="display:none"> View: <label id="view-num" title="The number of observers in the room"></label></label>
+				<label id="admin-number-panel" style="display:none"> Admin: <label id="admin-num" title="The number of admin in the room"></label></label>
+			</label>
+			<div id="join-control" style="display:inline;">&#10093; Link for Joiners <img id="copy-join-url" src="copy-link.png" title="copy link" /> <a id="share-url-for-join" href="#" target="_blank" rel="noreferrer"><img id="join-open-link" src="open-link.png" title="open link" /></a> Auto join <input type="checkbox" id="autostart-for-joner" checked /></div>
+			<div id="viewers-control">&#10093; Link for Viewers <img id="copy-view-url" src="copy-link.png" title="copy link" /> <a id="share-url-for-view" href="#" target="_blank" rel="noreferrer"><img id="view-open-link" src="open-link.png" title="open link" /></a> Sound OFF <input type="checkbox" id="soundoff" /></div>
+			<div id="admin-url">&#10093; Link for Admins <img id="copy-admin-url" src="copy-link.png" title="copy link" /> <a id="share-url-for-admin" href="#" target="_blank" rel="noreferrer"><img id="admin-open-link" src="open-link.png" title="open link" /></a></div>
+			<br />
+		</div>
+		<div id="room-settings" style="display:none">
+			<section id="select-device">
+				<span>Setup Media Stream</span>
+				<select id="audio-devices"></select>
+				<select id="video-devices"></select>
+				<select id="rotate-video">
+					<option value="default">Default video display</option>
+					<option value="rotate">Rotate video display</option>
+				</select>
+				<select id="video-quality"></select>
+				<select id="bandwidth"></select>
+				<select id="transport-policy"></select>
+				<select id="audio-handling">
+					<option value="default">Audio without processing</option>
+					<option value="pitch-shifter">Audio processing</option>
+				</select>
+				<input type="text" id="shiftSliderTextValue" style= "width: 30px;" /><input id="shiftSlider" type="range" min="-1" max="2" step="0.1" style= "vertical-align:middle;" />
+				<label>&#10093; Additional settings <input type="checkbox" id="additional-settings-checkbox" /></label>
+				
+					<section id="additional-settings" style="display:none">
+					
+					<label>Aspect ratio:
+						<select id="aspectRatio">
+							<option value="default">Default</option>
+							<option value="1.77">16:9</option>
+							<option value="1.33">4:3</option>
+							<option value="2.35">21:9</option>
+							<option value="1.4">14:10</option>
+							<option value="1.9">19:10</option>
+						</select>
+					</label>
+					<label>Frame rate:
+						<select id="frameRate">
+							<option value="default">Default</option>
+							<option>60</option>
+							<option>30</option>
+							<option>25</option>
+							<option>15</option>
+							<option>5</option>
+						</select>
+					</label>
+					<label>Cursor:
+						<select id="cursor">
+							<option value="default">Default</option>
+							<option>always</option>
+							<option>never</option>
+							<option>motion</option>
+						</select>
+					</label>
+				</section>
+			</section>
+		</div>
+		<div id="file-container"></div>
+		<div id="draw-container"></div>
+		<div id="status-box" class="status-box" style="display:none">
+			<div class="status-message">
+				<div id="status-content" class="status-content"></div>
+				<div id="status-close-btn" class="status-close-btn"></div>
+			</div>
+		</div>
+		<div id="manual-to-start"></div>
+		<div id="videos-container"></div>
+	</section>
+	<div id="bottom">
+		<br /><a href="/" title="Link exchange for secure video call between two or more anonymous users">DD Talk</a> is an Online Dialogue Service for anonymous and confidential real-time communication. It is based on an open source WebRTC JavaScript library of peer-to-peer network <a href="https://github.com/muaz-khan/RTCMultiConnection" target="_blank" rel="noreferrer">RTCMultiConnection</a>. DD Talk service is developed by volunteers of the <a href="https://online-dialogue.org/" target="_blank" rel="noreferrer">&#x000A9; Donbass Dialogue</a> Platform, 2014—2020.<br /><strong>Disclaimer</strong>: The DD Talk service is a <strong>Beta version <span id='lib-version'></span></strong> (<a href="https://github.com/VShtaba/ddtalk" target="_blank">Github</a>). For professional goals use technical support.
+	</div>
+	<div id="start-massage-for-broadcaster" style="display:none">
+		<ol style="list-style-type:decimal;list-style-position:inside;padding-right:1em;">A brief note:
+			<li>To start talk set Room name and click "Join"</li>
+			<li>Copy the link and share it with the participants</li>
+			<li>If you need, add viewers who will watch the conversation in the room, but will not be able to participate in it</li>
+			<li>If you want, add adminis to manage the connection settings</li>
+			<li>When finished, to end the connection, close the page</li>
+			<li>Generate new rooms for new talks</li>
+			<li>Select media stream options if needed</li>
+			<li>Disclaimer: for professional purposes, use technical support consultants</li>
+		</ol>
+	</div>
+	<div id="start-warning-massage-for-broadcaster" style="display:none">
+		<p style="background-color:antiquewhite;">Warning: DD Talk may not work correctly with your browser, if possible, install the latest version requires: <a href="https://www.google.com/chrome/" target="_blank" rel="noreferrer">Google Chrome</a></p>
+	</div>
+	<div id="start-warning-massage-for-broadcaster-with-iOS" style="display:none">
+		<p style="background-color:antiquewhite;">Warning: DD Talk may not work correctly with your browser, if possible, use the latest version Safari.</p>
+	</div>
+	<script type="text/javascript">
+		// Value autoreplace from server side when HTML is loading
+		const siteConfigEnableClientSideLogs = '$DEBUG_CLIENT_SIDE_LOGS_ENABLE'; 
+		const siteConfigTURNUser = '$TURN_USER';
+		const siteConfigTURNCredential = '$TURN_CREDENTIAL';
+		const siteConfigTURNAdress = '$TURN_ADRESS';
+		const siteConfigSTUNAdress = '$STUN_ADRESS';
+		const siteConfigEnableForViewersToRecordVideo = '$ENABLE_RECORD_VIDEO';
+	</script>
+	<script src="./dist/main.js"></script>
+</body>
+</html>

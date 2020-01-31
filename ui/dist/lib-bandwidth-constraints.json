@@ -1,0 +1,32 @@
+{
+	"NL": {
+		"name": "Bandwidth NO Limits",
+		"audio": false,
+		"video": false
+	},
+	"1024k": {
+		"name": "Bandwidth 1024 kbps",
+		"audio": 512,
+		"video": 1024
+	},
+	"512k": {
+		"name": "Bandwidth 512 kbps",
+		"audio": 512,
+		"video": 512
+	},
+	"256k": {
+		"name": "Bandwidth 256 kbps",
+		"audio": 256,
+		"video": 256
+	},
+	"128k": {
+		"name": "Bandwidth 128 kbps",
+		"audio": 128,
+		"video": 128
+	},
+	"6k": {
+		"name": "Ultra min 64 kbps",
+		"audio": 64,
+		"video": 64
+	}
+}

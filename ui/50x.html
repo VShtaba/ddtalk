@@ -1,0 +1,37 @@
+<!Doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--# if expr="$status = 502" -->
+      <meta http-equiv="refresh" content="2">
+<!--# endif -->
+<title>DDTalk Error page</title>
+</head> 
+<body>
+<h1>DDTalk Error page</h1>
+<h1>We are updating our website </h1>
+    <p>This is only for a few seconds, you will be redirected.</p>
+  <!--# else -->
+    <h1><!--# echo var="status" default="" --> <!--# echo var="status_text" default="Something goes wrong" --></h1>
+  <!--# endif -->
+  
+  <h2>Visitor information</h2>
+
+<p>Visitor IP address: <!--#echo var="REMOTE_ADDR" --></p>
+<p>Visitor User agent: <!--#echo var="HTTP_USER_AGENT" --></p>
+
+<h2>Server information</h2>
+
+<p>Server local time: <!--#echo var="DATE_LOCAL" --></p>
+<p>Server time (GMT): <!--#echo var="DATE_GMT" --></p>
+
+<p>Server uptime (refreshed every minute): <!--#include file="uptime.txt" --></p>
+
+<h2>Fortune of the day</h2>
+
+<pre>
+<!--#include file="fortune.txt" -->
+</pre>
+</body>
+</html>

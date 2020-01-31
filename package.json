@@ -1,0 +1,38 @@
+{
+  "name": "DDTalk",
+  "version": "20.01.9",
+  "author": {
+    "name": "DDP",
+    "email": "ddp.talk@gmail.com",
+    "url": "https://online-dialogue.org"
+  },
+  "description": "DD Talk is online secure video call service between two or more anonymous users. Code based on WebRTC lib RTCMultiConnection from Muaz Khan",
+  "keywords": [
+    "ddtalk",
+    "peer-to-peer",
+    "peer2peer",
+    "p2p",
+    "webrtc"
+  ],
+  "main": "./ui/index.html",
+  "homepage": "https://online-dialogue.org/programmnoye-obespechenie-online-dialoga/",
+  "readmeFilename": "README.md",
+  "private": true,
+  "preferGlobal": false,
+  "analyze": false,
+  "license": "MIT",
+  "engines": {
+    "node": "latest"
+  },
+  "dependencies": {
+    "canvas-designer": "latest",
+    "detectrtc": "latest",
+    "fbr": "latest",
+    "getstats": "latest",
+    "multistreamsmixer": "latest",
+    "recordrtc": "latest",
+    "rtcmulticonnection-server": "latest",
+    "socket.io": "latest",
+    "webrtc-adapter": "latest"
+  }
+}

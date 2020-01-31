@@ -1,0 +1,161 @@
+{
+	"NL": {
+		"name": "Default stream Quality",
+		"audio": {
+		},
+		"video": {
+		}
+	},
+	"320p1280p":  {
+		"name": "Resolutions from 320p to 1280p",
+		"audio": {
+			"autoGainControl": false,
+			"echoCancellation": true,
+			"noiseSuppression": true
+		},
+		"video": {
+			"width": { "min": 320, "ideal": 640, "max": 1280 },
+			"height": { "min": 180, "ideal": 480, "max": 720 },
+			"frameRate": { "max": 30 }
+		}
+	},
+	"2160p":  {
+		"name": "Ultra-HD (4K) 3860x2160",
+		"audio": {
+			"autoGainControl": true,
+			"echoCancellation": true,
+			"noiseSuppression": true
+		},
+		"video": {
+			"width": 3860 ,
+			"height": 2160,
+			"frameRate": { "max": 60 }
+		}
+	},
+	"1080p":  {
+		"name": "Full HD 1920x1080",
+		"audio": {
+			"autoGainControl": true,
+			"echoCancellation": true,
+			"noiseSuppression": true
+		},
+		"video": {
+			"width": 1920,
+			"height": 1080,
+			"frameRate": { "max": 60 }
+		}
+	},
+	"720p": {
+		"name": "Half HD 1280x720",
+		"audio": {
+			"autoGainControl": true,
+			"echoCancellation": true,
+			"noiseSuppression": true
+		},
+		"video": {
+			"width": 1280,
+			"height": 720,
+			"frameRate": {"max": 30}
+		}
+	},
+	"768p": {
+		"name": "XGA 1024x768",
+		"audio": {
+			"autoGainControl": true,
+			"echoCancellation": true,
+			"noiseSuppression": true
+		},
+		"video": {
+			"width": 1024,
+			"height": 768,
+			"frameRate": {"max": 30}
+		}
+	},
+	"480p":  {
+		"name": "VGA 640x480",
+		"audio": {
+			"autoGainControl": true,
+			"echoCancellation": true,
+			"noiseSuppression": true
+		},
+		"video": {
+			"width": 640,
+			"height": 480,
+			"frameRate": {"max": 30}
+		}
+	},
+	"480p15":  {
+		"name": "VGA 640x480 15 frames",
+		"audio": {
+			"autoGainControl": true,
+			"echoCancellation": true,
+			"noiseSuppression": true
+		},
+		"video": {
+			"width": 640,
+			"height": 480,
+			"frameRate": {"max": 15, "min": 5}
+		}
+	},
+	"240p":  {
+		"name": "SD 320x240",
+		"audio": {
+			"autoGainControl": true,
+			"echoCancellation": true,
+			"noiseSuppression": true
+		},
+		"video": {
+			"width": 320,
+			"height": 240,
+			"frameRate": {"max": 30}
+		}
+	},
+	"240p15":  {
+		"name": "SD 320x240 15 frames",
+		"audio": {
+			"autoGainControl": true,
+			"echoCancellation": true,
+			"noiseSuppression": true
+		},
+		"video": {
+			"width": 320,
+			"height": 240,
+			"frameRate": {"max": 15, "min": 5}
+		}
+	},
+	"120p":  {
+		"name": "160x120",
+		"audio": {
+			"autoGainControl": true,
+			"echoCancellation": true,
+			"noiseSuppression": true
+		},
+		"video": {
+			"width": 160,
+			"height": 120,
+			"frameRate": {"max": 30}
+		}
+	},
+	"120p5":  {
+		"name": "160x120 5 frames",
+		"audio": {
+			"autoGainControl": true,
+			"echoCancellation": true,
+			"noiseSuppression": true
+		},
+		"video": {
+			"width": 160,
+			"height": 120,
+			"frameRate": {"max": 5, "min": 1}
+		}
+	},
+	"OFF":  {
+		"name": "Video turn OFF",
+		"audio": {
+			"autoGainControl": true,
+			"echoCancellation": true,
+			"noiseSuppression": true
+		},
+		"video": false
+	}
+}

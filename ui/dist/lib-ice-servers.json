@@ -1,0 +1,25 @@
+{
+	"Default ICE Transport policy": {
+		"name": "default",
+		"urls": []
+	},
+	"Without TURN": {
+		"name": "stun",
+		"urls": []
+	},
+	"Only TURN": {
+		"name": "turn",
+		"urls": [],
+		"username": "",
+		"credential": ""
+	},
+	"Google STUN": {
+		"name": "google",
+		"urls": [
+			"stun:stun.l.google.com:19302",
+			"stun:stun1.l.google.com:19302",
+			"stun:stun2.l.google.com:19302",
+			"stun:stun.l.google.com:19302?transport=udp"
+		]
+	}
+}
