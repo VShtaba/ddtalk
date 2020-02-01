@@ -3,8 +3,8 @@
   "ioServerOrigins": ["___YOU_1_DOMEN__:*, ____YOU_2_DOMEN___:*"],
   "enableClientSideLogs":"false",
   "EnableRecordVideo":"true",
-  "TURNUser":"ddtalk",
-  "TURNCredential":"NwHEws0siF3g",
+  "TURNUser":"__TURN_USER__",
+  "TURNCredential":"__TURN_PASS__",
   "TURNAdress":[
 	"turn:__YOU_TURN_ADRESS__:__PORT__?transport=udp"
   ],
