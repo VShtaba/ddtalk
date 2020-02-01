@@ -14,7 +14,7 @@
     "p2p",
     "webrtc"
   ],
-  "main": "./ui/index.html",
+  "main": "server.js",
   "homepage": "https://online-dialogue.org/programmnoye-obespechenie-online-dialoga/",
   "readmeFilename": "README.md",
   "private": true,

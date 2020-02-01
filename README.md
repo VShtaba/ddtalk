@@ -271,7 +271,7 @@ $ sudo apt-get update && sudo apt-get upgrade -y
 $ wget https://github.com/VShtaba/ddtalk/archive/master.zip
 $ unzip master.zip
 $ rm master.zip
-$ cd DDTalk
+$ cd ddtalk-master
 ```
 
 В [config.json](./config.json) проверяем порт который слушает Node.js (по умолчанию 8081) и устанавливаем случайное значение для `socketCustomEvent`:
